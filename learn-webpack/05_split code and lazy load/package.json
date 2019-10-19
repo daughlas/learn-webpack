@@ -1,0 +1,11 @@
+{
+  "name": "split_asnyc_load",
+  "description": "## webpack methods 1. require.ensure 接受四个参数     1. []: dependencies 依赖，加载进来，不会执行     2. callback 才会执行     3。 errorCallback 失败的回调     4. chunkName 公共包名 2. require.include 只有一个参数",
+  "version": "",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}

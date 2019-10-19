@@ -1,0 +1,10 @@
+.item:nth-of-type(odd) {
+  background: #efefef;
+}
+.item {
+  padding: 10px;
+}
+
+button {
+  margin-bottom: 20px;
+}

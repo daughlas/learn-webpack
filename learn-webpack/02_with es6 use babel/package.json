@@ -1,0 +1,15 @@
+{
+  "name": "webpack_with_babel",
+  "version": "",
+  "description": "npm install --save-dev babel-loader babel-core npm install @babel/preset-env --save-dev 或者 npm install babel/preset-env --save-dev",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "babel-loader": "^8.0.0-beta.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.40",
+    "babel-polyfill": "^6.26.0"
+  }
+}

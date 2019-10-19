@@ -1,0 +1,19 @@
+{
+  "name": "03_typescript",
+  "version": "1.0.0",
+  "description": "no description",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "awesome-typescript-loader": "^4.0.1",
+    "ts-loader": "^3.5.0",
+    "typescript": "^2.7.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}

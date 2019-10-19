@@ -1,0 +1,30 @@
+{
+  // 一般情况配置 presets
+  "presets": [
+    // 再转化 env 代码
+    [
+      "@babel/preset-env", {
+        "targets": {
+          "chrome": "67"
+        },
+        // 只 polyfill 使用到的 ES 6 语法
+        "useBuiltIns": "usage"
+      }
+    ],
+    // 先转化 react 代码
+    "@babel/preset-react"
+  ]
+
+  // 打包自己的类库的时候
+  // 避免 poly-fill  污染全局环境
+  // "plugins": [[
+  //   "@babel/plugin-transform-runtime",
+  //   {
+  //     // 页面上没有的方法，babel会帮我们打包进来
+  //     "corejs": 2,
+  //     "helpers": true,
+  //     "regenerator": true,
+  //     "useESModules": false
+  //   }
+  // ]]
+} 

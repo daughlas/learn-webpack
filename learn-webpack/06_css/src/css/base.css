@@ -1,0 +1,13 @@
+html {
+    padding: 0;
+    margin: 0;
+    background: #aaa;
+}
+
+.box {
+    composes: bigBox from './common.css';    
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+    background: #333;
+}

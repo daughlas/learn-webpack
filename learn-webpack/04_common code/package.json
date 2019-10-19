@@ -1,0 +1,11 @@
+{
+  "name": "common_chunk",
+  "version": "",
+  "description": "1. 减少代码冗余 2. 提高用户加载速度",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}
