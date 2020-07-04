@@ -1,0 +1,18 @@
+{
+  // 一般情况配置 presets
+  "presets": [
+    // 再转化 env 代码
+    [
+      "@babel/preset-env", {
+        "targets": {
+          "chrome": "67"
+        },
+        // 只 polyfill 使用到的 ES 6 语法
+        "useBuiltIns": "usage"
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import"
+  ]
+} 

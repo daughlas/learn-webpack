@@ -29,10 +29,30 @@ module.exports = {
   optimization: {
     usedExports: true,
     splitChunks: {
-      chunks: 'all',
+      // chunks: 'async', // 在我们做代码分割的时候，只对异步代码生效
+      chunks: 'all', // 同步代码，异步代码都做代码分割
+      minSize: 30000,
+      maxSize: 0,
+      minChunks: 2,
+      maxAsyncRequests: 5,
+      maxInitialRequests: 3,
+      automaticNameDelimiter: '~',
+      automaticNameMaxLength: 30,
+      name: true,
       cacheGroups: {
-        vendors: false,
-        default: false
+        vendors: { // 符合下面条件的代码，打包之后，文件前缀都会加上一个 vendors
+          test: /[\\/]node_modules[\\/]/, // 同步代码打包会走到这儿
+          priority: -10,
+          filename: 'vendors.js'
+        },
+        default: {
+          // minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+          filename: 'common.js'
+        }
+        // vendors: false, // 异步代码分割的时候走到这儿
+        // default: false
       }
     }
   },
@@ -41,4 +61,5 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname, '../dist'),
   }
+
 }

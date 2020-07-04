@@ -15,4 +15,4 @@ function getComponent() {
 
 getComponent().then(element => {
   document.body.appendChild(element)
-})
+}) 
